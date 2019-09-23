@@ -2,3 +2,5 @@
 
 # dependencies
 node_modules/
+client/config/keys.js
+server/config/keys.js
