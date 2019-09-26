@@ -13,3 +13,5 @@ router.get('/',
             })
             .catch(err => console.log(err));
     });
+
+module.exports = router
