@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Landing from './screen/Landing';
+import TabPanel from './navigation/TabPanel'
 
 export default class App extends Component {
   render() {
     return (
       <BrowserRouter>
+        <TabPanel />
         <div className="App">
-          <Switch>
+          {/* <Switch>
             <Route exact path='/' component={Landing} />
-          </Switch>
+          </Switch> */}
         </div>
       </BrowserRouter>
     );

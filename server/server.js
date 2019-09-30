@@ -1,6 +1,7 @@
 const express = require("express");
 const cityRoute = require("./routes/cities");
 const itineraryRoute = require("./routes/itineraries");
+const activityRoute = require("./routes/activities");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose")
@@ -13,6 +14,7 @@ app.use(cors());
 
 app.use("/cities", cityRoute);
 app.use("/itineraries", itineraryRoute);
+app.use("/activities", activityRoute);
 
 mongoose.connect(db, { useNewUrlParser: true, useCreateIndex: true })
     .then(() => console.log('Connection to Mongo DB established'))
