@@ -4,21 +4,16 @@ export const CitiesContext = createContext()
 
 
 const CitiesContextProvider = (props) => {
-    const [cities, setCities] = useState([
-        {
-            name: "Amsterdam",
-            country: "Netherland",
-            img: "https://res.cloudinary.com/ds3w3iwbk/image/upload/v1559669413/MERN/20170624_104816.jpg",
-        },
-        {
-            name: "Amsterdam",
-            country: "Netherland",
-            img: "https://res.cloudinary.com/ds3w3iwbk/image/upload/v1559669413/MERN/20170624_104816.jpg",
-        },
+    const [cities, setCitiesList] = useState([])
 
-    ])
+    const getCities = async () => {
+        const response = await fetch(`http://localhost:5000/cities/all`);
+        const cityList = await response.json();
+        console.log('cityList :', cityList);
+        setCitiesList({ cityList });
+    }
     return (
-        <CitiesContext.Provider value={{ cities }}>
+        <CitiesContext.Provider value={{ cities, getCities }}>
             {props.children}
         </CitiesContext.Provider>
     )

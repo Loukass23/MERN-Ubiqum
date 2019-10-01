@@ -16,8 +16,10 @@ import Box from '@material-ui/core/Box';
 import { Link } from 'react-router-dom'
 import Landing from '../screen/Landing';
 
-import CitiesContextProvider from '../context/citiesContext';
+import CitiesContextProvider from '../context/CitiesContext';
+import ItinerariesContextProvider from '../context/ItinerariesContext';
 import Cities from '../screen/Cities';
+import Itineraries from '../screen/Itineraries';
 
 
 
@@ -98,8 +100,10 @@ export default function ScrollableTabsButtonPrevent() {
             </TabPanel>
 
             <TabPanel value={value} index={2}>
-                Itineraries
-      </TabPanel>
+                <ItinerariesContextProvider>
+                    <Itineraries></Itineraries>
+                </ItinerariesContextProvider>
+            </TabPanel>
             <TabPanel value={value} index={3}>
                 Activities
       </TabPanel>
