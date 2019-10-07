@@ -1,3 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`landing component snapshot 1`] = `ShallowWrapper {}`;
+exports[`landing component snapshot render 1`] = `
+<div>
+  <img
+    alt=""
+    src="MYtineraryLogo.png"
+    width="300"
+  />
+  <h1>
+    MyItinerary
+  </h1>
+  <p>
+    Find your perfect trip, designed by insiders who know and love their cities.
+  </p>
+  <section>
+    <h2>
+      Start Browsing
+    </h2>
+    <img
+      alt="circle arrow"
+      class="circledArrow"
+      src="circled-right-2.png"
+      width="50"
+    />
+  </section>
+  <section>
+    <p>
+      Want to build your own MYtinerary?
+    </p>
+    <div
+      class="Links"
+    >
+      <a
+        class="Home-link"
+        href=""
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Create Account
+      </a>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`landing component snapshot shallow  1`] = `
+<div>
+  <img
+    alt=""
+    src="MYtineraryLogo.png"
+    width={300}
+  />
+  <h1>
+    MyItinerary
+  </h1>
+  <p>
+    Find your perfect trip, designed by insiders who know and love their cities.
+  </p>
+  <section>
+    <h2>
+      Start Browsing
+    </h2>
+    <img
+      alt="circle arrow"
+      className="circledArrow"
+      src="circled-right-2.png"
+      width={50}
+    />
+  </section>
+  <section>
+    <p>
+      Want to build your own MYtinerary?
+    </p>
+    <div
+      className="Links"
+    >
+      <a
+        className="Home-link"
+        href=""
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Create Account
+      </a>
+    </div>
+  </section>
+</div>
+`;
